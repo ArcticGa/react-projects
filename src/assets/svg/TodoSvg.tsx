@@ -1,8 +1,8 @@
 const TodoSvg = () => {
 	return (
 		<svg
-			width='24px'
-			height='24px'
+			width='22px'
+			height='22px'
 			fill='#fff'
 			version='1.1'
 			viewBox='0 0 297 297'

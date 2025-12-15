@@ -25,15 +25,12 @@ const Home = () => {
 						<path d='M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z'></path>
 					</svg>
 				</Link>
-				<h1 className='text-center text-6xl font-bold h1-shadow leading-18'>
+				<h1 className='text-center text-6xl font-bold h1-shadow leading-18 mb-16'>
 					Список Проектов <br /> Для Практики
 				</h1>
-				<p className='mt-10 text-xl text-center text-[#ccc]'>
-					Список небольших проектов созданных в целях практики.
-				</p>
 			</div>
 
-			<div className='flex flex-col items-center justify-center mt-12 text-center'>
+			<div className='flex flex-col items-center justify-center text-center'>
 				<div className='grid grid-cols-3 gap-6'>
 					{projectsArray.map((project, index) => {
 						const Svg = project.svg
@@ -42,13 +39,15 @@ const Home = () => {
 							<Link
 								key={index}
 								to={project.link}
-								className='border border-[#ffffff23] rounded-xl p-4 bg-[#ffffff03] max-w-[300px] w-full'
+								className='flex flex-col gap-2 border border-[#ffffff23] rounded-xl p-4 bg-[#ffffff03] max-w-[300px] w-full transition-all duration-250 ease-in-out hover:scale-[1.05]'
 							>
-								<div className='flex items-center gap-2 justify-center'>
+								<div className='flex items-center gap-1.5 justify-center'>
 									<Svg />
 									<span className='text-xl'>{project.title}</span>
 								</div>
-								<div>{project.text}</div>
+								<div className='flex-1 flex items-center justify-center text-sm text-[#b8b8b8]'>
+									{project.text}
+								</div>
 							</Link>
 						)
 					})}

@@ -1,7 +1,7 @@
 const Todo = () => {
 	return (
-		<div className='div-center'>
-			<div className=' flex flex-col w-[600px] rounded-[20px] bg-white text-black div-shadow'>
+		<div className='flex justify-center mt-16'>
+			<div className=' flex flex-col w-[600px] rounded-[20px] bg-white text-black'>
 				<div className='relative'>
 					<ul className='flex list-none p-0 m-0 border-b-2 border-[#f7f7f7]'>
 						<li className='border-b-[#5f2acf] text-black py-[18px] px-5 border-b-2 border-transparent cursor-pointer hover:border-b-[#e3d8fa] hover:text-black'>
